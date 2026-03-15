@@ -1,84 +1,64 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <!-- Install banner -->
-    <q-banner v-if="pwa.installPrompt" class="bg-dark text-white" dense inline-actions>
-      <template v-slot:avatar>
-        <q-icon name="install_mobile" />
-      </template>
-      Installér som app
-      <template v-slot:action>
-        <q-btn flat label="Installér" color="primary" @click="pwa.installApp()" />
-        <q-btn flat label="✕" @click="pwa.dismiss()" />
-      </template>
-    </q-banner>
-
-    <!-- Mobile header -->
-    <q-header class="lt-md" style="background:var(--surface);border-bottom:1px solid var(--border)">
+  <q-layout view="hHh lpR fFf">
+    <!-- Header -->
+    <q-header elevated>
       <q-toolbar>
-        <q-btn flat dense round icon="menu" color="grey-7" @click="drawerOpen = !drawerOpen" />
-        <q-toolbar-title style="font-family:var(--serif);font-size:15px;font-weight:700;color:var(--accent);text-align:center">
-          ♠♥ Bridge Lærebog
+        <q-btn flat dense round icon="menu" class="lt-md" @click="drawerOpen = !drawerOpen" />
+        <q-toolbar-title>
+          ♠♥♦♣ Bridge Lærebog
         </q-toolbar-title>
-        <q-btn flat dense round :icon="theme.isDark ? 'light_mode' : 'dark_mode'" color="grey-7" @click="theme.toggle()" />
+        <q-btn flat round :icon="theme.isDark ? 'light_mode' : 'dark_mode'" @click="theme.toggle()" />
       </q-toolbar>
     </q-header>
 
-    <!-- Drawer -->
-    <q-drawer v-model="drawerOpen" :width="270" :breakpoint="768" bordered show-if-above
-      :class="theme.isDark ? 'bg-dark' : 'bg-white'">
-      <q-scroll-area class="fit" style="background:var(--surface)">
-        <!-- Logo -->
-        <div class="logo">
-          <div class="logo-suits">
-            <span class="s">♠</span><span class="r">♥</span><span class="r">♦</span><span class="s">♣</span>
-          </div>
-          <div class="logo-title">Bridge Lærebog</div>
-          <div class="logo-sub">Skolebridge · Ny Nordisk</div>
-        </div>
-
-        <!-- Theme toggle -->
-        <div style="padding:8px 12px">
-          <q-btn flat dense no-caps class="full-width"
-            :icon="theme.isDark ? 'light_mode' : 'dark_mode'"
-            :label="theme.isDark ? 'Lyst tema' : 'Mørkt tema'"
-            @click="theme.toggle()"
-            style="font-family:var(--mono);font-size:11px;color:var(--text-dim)" />
-        </div>
-
+    <!-- Permanent drawer -->
+    <q-drawer v-model="drawerOpen" show-if-above :width="280" bordered>
+      <q-scroll-area class="fit">
         <!-- Progress -->
-        <div class="prog-wrap">
-          <div class="prog-bar">
-            <div class="prog-fill" :style="{ width: progress.prog + '%' }"></div>
-          </div>
-          <div class="prog-txt">
-            {{ progress.done.length }} / {{ lessonsCount }} lektioner gennemført
+        <div class="q-pa-md">
+          <div class="text-caption text-grey">Fremgang</div>
+          <q-linear-progress :value="progress.prog / 100" color="primary" class="q-mt-xs" />
+          <div class="text-caption text-grey q-mt-xs">
+            {{ progress.done.length }} / {{ lessonsCount }} lektioner
           </div>
         </div>
 
-        <!-- Reference nav -->
-        <div class="nav-grp">
-          <div class="nav-grp-title">Reference</div>
-          <div class="nav-item" :class="{ active: $route.path === '/dict' }"
+        <q-separator />
+
+        <!-- Reference -->
+        <q-list>
+          <q-item-label header>Reference</q-item-label>
+          <q-item clickable v-ripple :active="$route.path === '/dict'" active-class="text-primary"
             @click="navigate('/dict')">
-            <span class="nn">A–Z</span><span>Bridgeordbog</span>
-          </div>
-          <div class="nav-item" :class="{ active: $route.path === '/hp' }"
+            <q-item-section avatar><q-icon name="menu_book" /></q-item-section>
+            <q-item-section>Bridgeordbog</q-item-section>
+          </q-item>
+          <q-item clickable v-ripple :active="$route.path === '/hp'" active-class="text-primary"
             @click="navigate('/hp')">
-            <span class="nn">HP</span><span>Point &amp; zoner</span>
-          </div>
-        </div>
+            <q-item-section avatar><q-icon name="calculate" /></q-item-section>
+            <q-item-section>Point &amp; zoner</q-item-section>
+          </q-item>
+        </q-list>
+
+        <q-separator />
 
         <!-- Lesson groups -->
-        <div v-for="group in lessonGroups" :key="group.title" class="nav-grp">
-          <div class="nav-grp-title">{{ group.title }}</div>
-          <div v-for="i in group.indices" :key="i" class="nav-item"
-            :class="{ active: $route.path === '/lesson/' + i }"
+        <q-list v-for="group in lessonGroups" :key="group.title">
+          <q-item-label header>{{ group.title }}</q-item-label>
+          <q-item v-for="i in group.indices" :key="i" clickable v-ripple
+            :active="$route.path === '/lesson/' + i" active-class="text-primary"
             @click="navigateLesson(i)">
-            <span class="nn">{{ group.symbol || String(i + 1).padStart(2, '0') }}</span>
-            <span>{{ lessons[i].short }}</span>
-            <span class="chk" v-if="progress.done.includes(i)">✓</span>
-          </div>
-        </div>
+            <q-item-section avatar>
+              <q-avatar size="24px" font-size="11px" color="grey-8" text-color="white">
+                {{ group.symbol || String(i + 1).padStart(2, '0') }}
+              </q-avatar>
+            </q-item-section>
+            <q-item-section>{{ lessons[i].short }}</q-item-section>
+            <q-item-section side v-if="progress.done.includes(i)">
+              <q-icon name="check_circle" color="positive" size="xs" />
+            </q-item-section>
+          </q-item>
+        </q-list>
       </q-scroll-area>
     </q-drawer>
 
@@ -86,6 +66,16 @@
     <q-page-container>
       <router-view />
     </q-page-container>
+
+    <!-- Install banner -->
+    <q-banner v-if="pwa.installPrompt" class="fixed-bottom bg-primary text-white" inline-actions>
+      <template v-slot:avatar><q-icon name="install_mobile" /></template>
+      Installér som app
+      <template v-slot:action>
+        <q-btn flat label="Installér" @click="pwa.installApp()" />
+        <q-btn flat icon="close" @click="pwa.dismiss()" />
+      </template>
+    </q-banner>
   </q-layout>
 </template>
 
@@ -103,17 +93,15 @@ const theme = useThemeStore();
 const progress = useProgressStore();
 const pwa = usePwaStore();
 
-const drawerOpen = ref(false);
+const drawerOpen = ref(true);
 const lessonsCount = lessons.length;
 
 function navigate(path: string) {
   router.push(path);
-  drawerOpen.value = false;
 }
 
 function navigateLesson(i: number) {
   progress.go(i);
   router.push('/lesson/' + i);
-  drawerOpen.value = false;
 }
 </script>

@@ -1,12 +1,15 @@
 <template>
-  <q-page>
+  <q-page padding>
     <div class="lhdr" data-bg="A–Z">
       <div class="lnum">Reference</div>
       <div class="ltitle">Bridgeordbog</div>
       <div class="lintro">Alle centrale bridge-termer præcist defineret. Søg i feltet nedenfor eller rul alfabetisk.</div>
     </div>
     <div class="dict-wrap">
-      <input class="dict-search" placeholder="Søg efter term…" v-model="search" @input="filter()">
+      <q-input v-model="search" @update:model-value="filter()" outlined dense placeholder="Søg efter term…"
+        clearable class="q-mb-lg">
+        <template v-slot:prepend><q-icon name="search" /></template>
+      </q-input>
       <template v-for="grp in filtered" :key="grp.letter">
         <div>
           <div class="dict-letter">{{ grp.letter }}</div>

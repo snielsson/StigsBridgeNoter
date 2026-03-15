@@ -1,5 +1,5 @@
 <template>
-  <q-page>
+  <q-page padding>
     <div class="lhdr" data-bg="HP">
       <div class="lnum">Reference · Matematik</div>
       <div class="ltitle">Pointsystem og zoner</div>
