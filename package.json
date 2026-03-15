@@ -1,0 +1,35 @@
+{
+  "name": "bridge-larebog",
+  "version": "1.0.0",
+  "description": "Interaktiv bridge lærebog — Skolebridge for Voksne, Ny Nordisk Standard",
+  "productName": "Bridge Lærebog",
+  "author": "Stig Schmidt Nielsson",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "quasar dev",
+    "build": "quasar build -m pwa",
+    "build:spa": "quasar build",
+    "deploy": "quasar build -m pwa && echo Build complete in docs/"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.16.0",
+    "pinia": "^2.2.0",
+    "quasar": "^2.16.0",
+    "register-service-worker": "^1.7.2",
+    "vue": "^3.5.0",
+    "vue-router": "^4.4.0"
+  },
+  "devDependencies": {
+    "@quasar/app-vite": "^2.1.0",
+    "sass": "^1.80.0",
+    "typescript": "~5.7.0",
+    "workbox-build": "^7.0.0",
+    "workbox-cacheable-response": "^7.0.0",
+    "workbox-core": "^7.0.0",
+    "workbox-expiration": "^7.0.0",
+    "workbox-precaching": "^7.0.0",
+    "workbox-routing": "^7.0.0",
+    "workbox-strategies": "^7.0.0"
+  }
+}

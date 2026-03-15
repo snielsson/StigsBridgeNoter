@@ -1,0 +1,26 @@
+.DS_Store
+.thumbs.db
+node_modules
+
+# Quasar core output
+.quasar
+
+# Local env files
+.env
+.env.*
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Keep docs/ tracked for GitHub Pages
