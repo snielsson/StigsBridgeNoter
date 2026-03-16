@@ -37,7 +37,7 @@
           <q-expansion-item v-for="group in lessonGroups" :key="group.title"
             :icon="groupIcon(group.title)" :label="group.title" default-opened>
             <q-item v-for="i in group.indices" :key="i" clickable v-ripple
-              :active="$route.path === '/lesson/' + i" active-class="text-primary"
+              :active="$route.path === '/lesson/' + (i + 1)" active-class="text-primary"
               @click="navigateLesson(i)" :inset-level="0.3">
               <q-item-section avatar>
                 <q-avatar size="24px" font-size="11px" color="grey-8" text-color="white">
@@ -92,7 +92,7 @@ function navigate(path: string) {
 
 function navigateLesson(i: number) {
   progress.go(i);
-  router.push('/lesson/' + i);
+  router.push('/lesson/' + (i + 1));
 }
 
 function groupIcon(title: string): string {

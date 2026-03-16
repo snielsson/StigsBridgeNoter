@@ -5,7 +5,7 @@ const routes = [
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', redirect: '/lesson/0' },
+      { path: '', redirect: '/lesson/1' },
       { path: 'lesson/:id', component: () => import('pages/LessonPage.vue') },
       { path: 'dict', component: () => import('pages/DictionaryPage.vue') },
       { path: 'hp', component: () => import('pages/HpCalculatorPage.vue') },

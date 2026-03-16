@@ -1,30 +1,26 @@
 <template>
   <q-page padding>
     <template v-if="lesson">
-      <!-- Header -->
       <div class="lhdr" :data-bg="lesson.bg">
-        <div class="lnum">Lektion {{ id + 1 }} · {{ lesson.cat }}</div>
+        <div class="lnum">Lektion {{ lessonNum }} · {{ lesson.cat }}</div>
         <div class="ltitle" v-html="lesson.title"></div>
         <div class="lintro" v-html="lesson.intro"></div>
       </div>
 
-      <!-- Content -->
       <div class="lbody" v-html="lesson.content"></div>
 
-      <!-- Quiz -->
       <div v-if="lesson.quiz" class="lbody" style="padding-top:0">
-        <QuizBlock :quiz="lesson.quiz" :key="id" />
+        <QuizBlock :quiz="lesson.quiz" :key="lessonNum" />
       </div>
 
-      <!-- Navigation -->
       <div class="lbody" style="padding-top:0">
         <div class="nav-btns">
-          <q-btn v-if="id > 0" flat no-caps icon="arrow_back" label="Forrige" @click="goTo(id - 1)" />
-          <q-btn v-if="!progress.done.includes(id)" color="primary" no-caps icon="check"
-            label="Markér læst" @click="progress.markDone(); goTo(id + 1)" />
-          <q-btn v-if="id < lessonsCount - 1 && progress.done.includes(id)" color="primary" no-caps
-            icon-right="arrow_forward" label="Næste lektion" @click="goTo(id + 1)" />
-          <span v-if="id === lessonsCount - 1 && progress.done.includes(id)"
+          <q-btn v-if="lessonNum > 1" flat no-caps icon="arrow_back" label="Forrige" @click="goTo(lessonNum - 1)" />
+          <q-btn v-if="!progress.done.includes(idx)" color="primary" no-caps icon="check"
+            label="Markér læst" @click="markAndNext()" />
+          <q-btn v-if="lessonNum < lessonsCount && progress.done.includes(idx)" color="primary" no-caps
+            icon-right="arrow_forward" label="Næste lektion" @click="goTo(lessonNum + 1)" />
+          <span v-if="lessonNum === lessonsCount && progress.done.includes(idx)"
             class="text-positive text-body2 q-pa-sm">
             🎉 Alle lektioner gennemført!
           </span>
@@ -46,13 +42,22 @@ const router = useRouter();
 const progress = useProgressStore();
 const lessonsCount = lessons.length;
 
-const id = computed(() => parseInt(route.params.id as string) || 0);
-const lesson = computed(() => lessons[id.value]);
+// URL is 1-based, array is 0-based
+const lessonNum = computed(() => parseInt(route.params.id as string) || 1);
+const idx = computed(() => lessonNum.value - 1);
+const lesson = computed(() => lessons[idx.value]);
 
-function goTo(i: number) {
-  if (i >= 0 && i < lessonsCount) {
-    progress.go(i);
-    router.push('/lesson/' + i);
+function goTo(num: number) {
+  if (num >= 1 && num <= lessonsCount) {
+    progress.go(num - 1);
+    router.push('/lesson/' + num);
+  }
+}
+
+function markAndNext() {
+  progress.markDone();
+  if (lessonNum.value < lessonsCount) {
+    goTo(lessonNum.value + 1);
   }
 }
 </script>
