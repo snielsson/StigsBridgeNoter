@@ -16,14 +16,14 @@
           <div v-for="e in grp.entries" :key="e.term" class="dict-entry">
             <div class="dict-term" v-html="e.term + (e.cat ? '<span>' + e.cat + '</span>' : '')"></div>
             <div v-if="e.alt"
-              v-html="'<span style=\'font-size:11px;color:var(--text-dim);font-family:var(--mono);display:block;margin-bottom:5px\'>↔ ' + e.alt + '</span>'">
+              v-html="'<span style=\'font-size:11px;color:grey;display:block;margin-bottom:5px\'>↔ ' + e.alt + '</span>'">
             </div>
             <div class="dict-def" v-html="e.def"></div>
             <div v-if="e.ex" class="dict-ex" v-html="'Eks.: ' + e.ex"></div>
           </div>
         </div>
       </template>
-      <div v-if="filtered.length === 0" style="color:var(--text-dim);padding:20px 0;font-size:14px">
+      <div v-if="filtered.length === 0" style="color:grey;padding:20px 0;font-size:14px">
         Ingen resultater.
       </div>
     </div>

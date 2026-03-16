@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx quasar:*)",
+      "Bash(npm install:*)",
+      "Bash(cd \"C:/git/github/snielsson/StigsBridgeNoter\" && npx create-quasar --project-type app --project-name bridge-larebog --project-description \"Interaktiv bridge lærebog — Skolebridge for Voksne\" --project-author \"Stig Schmidt Nielsson\" --project-css sass --project-preset typescript --project-linter none --project-engine vite --project-install npm --dir quasar-app 2>&1)",
+      "Bash(rm -rf C:/git/github/snielsson/StigsBridgeNoter/quasar-app)",
+      "Read(//c/tmp/**)",
+      "Bash(npx create-quasar:*)",
+      "Bash(cd \"C:/git/github/snielsson/StigsBridgeNoter\" && node -e \"try { require.resolve\\('@quasar/app-vite/tsconfig-preset'\\); console.log\\('found'\\) } catch\\(e\\) { console.log\\(e.message\\) }\")",
+      "Bash(node -e \"const p=require\\('C:/git/github/snielsson/StigsBridgeNoter/node_modules/@quasar/app-vite/package.json'\\);console.log\\('version:',p.version\\);console.log\\('exports:',JSON.stringify\\(Object.keys\\(p.exports||{}\\)\\)\\)\")",
+      "Bash(cd \"C:/git/github/snielsson/StigsBridgeNoter\" && rm -f icon-192.png icon-512.png manifest.json sw.js files.zip)",
+      "Bash(cd \"C:/git/github/snielsson/StigsBridgeNoter\" && sed -i \"s/font-family:var\\(--mono\\);//g\" src/pages/HpCalculatorPage.vue && sed -i \"s/font-family:var\\(--mono\\);//g\" src/pages/DictionaryPage.vue && sed -i \"s/font-family:var\\(--serif\\);//g\" src/pages/HpCalculatorPage.vue && sed -i \"s/font-family:var\\(--sans\\);//g\" src/pages/HpCalculatorPage.vue && echo \"done\")",
+      "Bash(cd \"C:/git/github/snielsson/StigsBridgeNoter\" && sed -i 's/var\\(--text-dim\\)/grey/g; s/var\\(--accent\\)/var\\(--q-primary\\)/g; s/var\\(--accent2\\)/var\\(--q-positive\\)/g; s/var\\(--surface2\\)/rgba\\(0,0,0,0.03\\)/g; s/var\\(--surface\\)/transparent/g; s/var\\(--border\\)/rgba\\(128,128,128,0.2\\)/g; s/var\\(--text\\)/inherit/g; s/var\\(--bg\\)/inherit/g' src/pages/HpCalculatorPage.vue && echo \"done\")",
+      "Bash(cd \"C:/git/github/snielsson/StigsBridgeNoter\" && sed -i 's/var\\(--text-dim\\)/grey/g; s/var\\(--mono\\)/monospace/g' src/pages/DictionaryPage.vue && echo \"done\")"
+    ]
+  }
+}

@@ -22,13 +22,13 @@
       <p>Tænk på den <em>kombinerede</em> styrke hos makkerparret som fire zoner. Modstanderne har resten af de 40 HP.</p>
 
       <div style="margin:24px 0">
-        <div style="display:flex;height:48px;border-radius:5px;overflow:hidden;border:1px solid var(--border)">
-          <div style="width:50%;background:#2a2a38;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;color:var(--text-dim)">20 HP · Delkontrakt</div>
-          <div style="width:17.5%;background:rgba(200,169,110,.3);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;color:var(--accent)">25 HP · Parti</div>
-          <div style="width:20%;background:rgba(200,169,110,.55);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;color:var(--accent)">33 HP · Slem</div>
-          <div style="width:12.5%;background:rgba(200,169,110,.85);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;color:#0e0e12">37 HP</div>
+        <div style="display:flex;height:48px;border-radius:5px;overflow:hidden;border:1px solid rgba(128,128,128,0.2)">
+          <div style="width:50%;background:#2a2a38;display:flex;align-items:center;justify-content:center;font-size:11px;color:grey">20 HP · Delkontrakt</div>
+          <div style="width:17.5%;background:rgba(200,169,110,.3);display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--q-primary)">25 HP · Parti</div>
+          <div style="width:20%;background:rgba(200,169,110,.55);display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--q-primary)">33 HP · Slem</div>
+          <div style="width:12.5%;background:rgba(200,169,110,.85);display:flex;align-items:center;justify-content:center;font-size:11px;color:#0e0e12">37 HP</div>
         </div>
-        <div style="display:flex;font-size:11px;color:var(--text-dim);font-family:var(--mono);margin-top:6px;gap:2px">
+        <div style="display:flex;font-size:11px;color:grey;margin-top:6px;gap:2px">
           <div style="width:50%">←── del ──→</div>
           <div style="width:17.5%;text-align:center">parti</div>
           <div style="width:20%;text-align:center">slem</div>
@@ -47,41 +47,41 @@
       </table>
 
       <h2>Regnekalkulator: Stikestimering</h2>
-      <p>Formlen: <span style="background:var(--surface2);padding:2px 8px;border-radius:3px;font-family:var(--mono)">Estimerede stik ≈ (kombinerede HP ÷ 40) × 13</span></p>
+      <p>Formlen: <span style="background:rgba(0,0,0,0.03);padding:2px 8px;border-radius:3px;font-family:var(--mono)">Estimerede stik ≈ (kombinerede HP ÷ 40) × 13</span></p>
 
       <!-- Interactive calculator -->
-      <div style="background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:24px;margin:20px 0">
+      <div style="background:rgba(0,0,0,0.03);border:1px solid rgba(128,128,128,0.2);border-radius:6px;padding:24px;margin:20px 0">
         <div style="display:flex;gap:32px;flex-wrap:wrap;margin-bottom:20px">
           <div>
-            <div style="font-size:11px;color:var(--text-dim);font-family:var(--mono);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px">Dine HP</div>
+            <div style="font-size:11px;color:grey;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px">Dine HP</div>
             <div style="display:flex;align-items:center;gap:10px">
-              <q-btn flat dense icon="remove" @click="myHP = Math.max(0, myHP - 1)" style="background:var(--surface);border:1px solid var(--border);color:var(--text);width:32px;height:32px" />
-              <span style="font-family:var(--mono);font-size:28px;font-weight:600;color:var(--accent);min-width:40px;text-align:center">{{ myHP }}</span>
-              <q-btn flat dense icon="add" @click="myHP = Math.min(40, myHP + 1)" style="background:var(--surface);border:1px solid var(--border);color:var(--text);width:32px;height:32px" />
+              <q-btn flat dense icon="remove" @click="myHP = Math.max(0, myHP - 1)" style="background:transparent;border:1px solid rgba(128,128,128,0.2);color:inherit;width:32px;height:32px" />
+              <span style="font-size:28px;font-weight:600;color:var(--q-primary);min-width:40px;text-align:center">{{ myHP }}</span>
+              <q-btn flat dense icon="add" @click="myHP = Math.min(40, myHP + 1)" style="background:transparent;border:1px solid rgba(128,128,128,0.2);color:inherit;width:32px;height:32px" />
             </div>
           </div>
           <div>
-            <div style="font-size:11px;color:var(--text-dim);font-family:var(--mono);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px">Makkeres HP</div>
+            <div style="font-size:11px;color:grey;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px">Makkeres HP</div>
             <div style="display:flex;align-items:center;gap:10px">
-              <q-btn flat dense icon="remove" @click="mkHP = Math.max(0, mkHP - 1)" style="background:var(--surface);border:1px solid var(--border);color:var(--text);width:32px;height:32px" />
-              <span style="font-family:var(--mono);font-size:28px;font-weight:600;color:var(--accent2);min-width:40px;text-align:center">{{ mkHP }}</span>
-              <q-btn flat dense icon="add" @click="mkHP = Math.min(40, mkHP + 1)" style="background:var(--surface);border:1px solid var(--border);color:var(--text);width:32px;height:32px" />
+              <q-btn flat dense icon="remove" @click="mkHP = Math.max(0, mkHP - 1)" style="background:transparent;border:1px solid rgba(128,128,128,0.2);color:inherit;width:32px;height:32px" />
+              <span style="font-size:28px;font-weight:600;color:var(--q-positive);min-width:40px;text-align:center">{{ mkHP }}</span>
+              <q-btn flat dense icon="add" @click="mkHP = Math.min(40, mkHP + 1)" style="background:transparent;border:1px solid rgba(128,128,128,0.2);color:inherit;width:32px;height:32px" />
             </div>
           </div>
           <div style="display:flex;flex-direction:column;justify-content:flex-end">
-            <div style="font-size:11px;color:var(--text-dim);font-family:var(--mono);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px">Total</div>
-            <span style="font-family:var(--mono);font-size:28px;font-weight:600;color:var(--text)">{{ total }}</span>
+            <div style="font-size:11px;color:grey;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px">Total</div>
+            <span style="font-size:28px;font-weight:600;color:inherit">{{ total }}</span>
           </div>
         </div>
 
         <!-- Result bar -->
         <div style="margin-bottom:16px">
-          <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text-dim);font-family:var(--mono);margin-bottom:6px">
+          <div style="display:flex;justify-content:space-between;font-size:11px;color:grey;margin-bottom:6px">
             <span>0</span><span>20</span><span>25</span><span>33</span><span>37</span><span>40</span>
           </div>
-          <div style="height:12px;background:var(--border);border-radius:6px;position:relative;overflow:visible">
+          <div style="height:12px;background:rgba(128,128,128,0.2);border-radius:6px;position:relative;overflow:visible">
             <div :style="{ width: Math.min(total / 40 * 100, 100) + '%', background: zoneColor, height: '100%', borderRadius: '6px', transition: 'width .2s' }"></div>
-            <div style="position:absolute;top:-4px;left:50%;width:1px;height:20px;background:var(--border)"></div>
+            <div style="position:absolute;top:-4px;left:50%;width:1px;height:20px;background:rgba(128,128,128,0.2)"></div>
             <div style="position:absolute;top:-4px;left:62.5%;width:1px;height:20px;background:rgba(200,169,110,.4)"></div>
             <div style="position:absolute;top:-4px;left:82.5%;width:1px;height:20px;background:rgba(200,169,110,.6)"></div>
             <div style="position:absolute;top:-4px;left:92.5%;width:1px;height:20px;background:rgba(200,169,110,.8)"></div>
@@ -89,23 +89,23 @@
         </div>
 
         <!-- Verdict -->
-        <div style="background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:16px 20px">
-          <div style="font-family:var(--mono);font-size:11px;color:var(--text-dim);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px">Analyse</div>
+        <div style="background:transparent;border:1px solid rgba(128,128,128,0.2);border-radius:4px;padding:16px 20px">
+          <div style="font-size:11px;color:grey;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px">Analyse</div>
           <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px">
             <div>
-              <div style="font-size:11px;color:var(--text-dim);margin-bottom:3px">Estimerede stik</div>
-              <div style="font-family:var(--mono);font-size:20px;font-weight:600" :style="{ color: zoneColor }">{{ estStik }}</div>
+              <div style="font-size:11px;color:grey;margin-bottom:3px">Estimerede stik</div>
+              <div style="font-size:20px;font-weight:600" :style="{ color: zoneColor }">{{ estStik }}</div>
             </div>
             <div>
-              <div style="font-size:11px;color:var(--text-dim);margin-bottom:3px">Zone</div>
+              <div style="font-size:11px;color:grey;margin-bottom:3px">Zone</div>
               <div style="font-size:14px;font-weight:500" :style="{ color: zoneColor }">{{ zoneName }}</div>
             </div>
             <div>
-              <div style="font-size:11px;color:var(--text-dim);margin-bottom:3px">Modstanderne har</div>
-              <div style="font-family:var(--mono);font-size:14px;color:var(--text-dim)">{{ 40 - total }} HP</div>
+              <div style="font-size:11px;color:grey;margin-bottom:3px">Modstanderne har</div>
+              <div style="font-size:14px;color:grey">{{ 40 - total }} HP</div>
             </div>
           </div>
-          <div style="margin-top:12px;font-size:13.5px;color:var(--text-dim);line-height:1.6;padding-top:10px;border-top:1px solid var(--border)">{{ verdict }}</div>
+          <div style="margin-top:12px;font-size:13.5px;color:grey;line-height:1.6;padding-top:10px;border-top:1px solid rgba(128,128,128,0.2)">{{ verdict }}</div>
         </div>
       </div>
 
