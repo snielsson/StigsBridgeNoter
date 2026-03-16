@@ -3,12 +3,12 @@ import { ref } from 'vue';
 import { Dark } from 'quasar';
 
 export const useThemeStore = defineStore('theme', () => {
-  const isDark = ref(true);
+  const isDark = ref(false);
 
   function init() {
     try {
       const t = localStorage.getItem('brtheme');
-      if (t === 'light') isDark.value = false;
+      if (t === 'dark') isDark.value = true;
     } catch { /* ignore */ }
     Dark.set(isDark.value);
   }

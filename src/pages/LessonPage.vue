@@ -7,7 +7,7 @@
         <div class="lintro" v-html="lesson.intro"></div>
       </div>
 
-      <div class="lbody" v-html="lesson.content"></div>
+      <div class="lbody" v-html="linkedContent" @click="handleTermClick"></div>
 
       <div v-if="lesson.quiz" class="lbody" style="padding-top:0">
         <QuizBlock :quiz="lesson.quiz" :key="lessonNum" />
@@ -26,26 +26,41 @@
           </span>
         </div>
       </div>
+
+      <TermPopup :term="activeTerm" @close="activeTerm = null" />
     </template>
   </q-page>
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useProgressStore } from 'stores/progress';
 import { lessons } from 'src/data/lessons';
+import { linkTerms } from 'src/data/termLinker';
 import QuizBlock from 'components/QuizBlock.vue';
+import TermPopup from 'components/TermPopup.vue';
 
 const route = useRoute();
 const router = useRouter();
 const progress = useProgressStore();
 const lessonsCount = lessons.length;
 
-// URL is 1-based, array is 0-based
 const lessonNum = computed(() => parseInt(route.params.id as string) || 1);
 const idx = computed(() => lessonNum.value - 1);
 const lesson = computed(() => lessons[idx.value]);
+const linkedContent = computed(() => lesson.value ? linkTerms(lesson.value.content) : '');
+
+const activeTerm = ref<string | null>(null);
+
+function handleTermClick(e: MouseEvent) {
+  const target = e.target as HTMLElement;
+  const link = target.closest('.term-link') as HTMLElement | null;
+  if (link) {
+    e.preventDefault();
+    activeTerm.value = link.dataset.term || null;
+  }
+}
 
 function goTo(num: number) {
   if (num >= 1 && num <= lessonsCount) {

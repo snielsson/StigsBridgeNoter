@@ -1325,5 +1325,75 @@ ${tbl(['Melding','HP-zone','Fordeling','System'],[
 ${tip(`Tag-med huskeregel: <strong>HP styrer auktionen, FP justerer støttemeldingen.</strong> Åbn aldrig "på" fordelingspoint. Tæl dem kun når fit er bekræftet og du er i trumfspil.`)}
 `},
 
+// ═══════════════════════════════════════════
+// MELDEKORT
+// ═══════════════════════════════════════════
+{short:'Meldekort',title:'Meldekort og meldeprocedurer',cat:'Procedure',bg:'📋',
+intro:`I turneringsbridge bruges meldekort (bidding boxes) i stedet for mundtlige meldinger. Her gennemgås alle korttyper, fysisk håndtering, Stop-proceduren og Alert-proceduren.`,
+quiz:{question:`Du vil springe fra 1${H} til 3${H}. Hvad er korrekt procedure med meldekort?`,options:['Læg 3♥-kortet direkte på bordet','Læg Stop-kortet, derefter 3♥-kortet — næste spiller venter ca. 10 sekunder','Sig "stop" højt og læg 3♥-kortet','Læg Alert-kortet og derefter 3♥-kortet'],correct:1,explain:`Ved springmeldinger lægges Stop-kortet FØRST, derefter meldingskortet. Næste spiller skal vente ca. 10 sekunder for at undgå ulovlig information via hurtig eller langsom reaktion.`},
+content:`
+<h2>Hvad er meldekort?</h2>
+${rb(`<strong>Meldekort</strong> (bidding box) er fysiske kort i en kasse der bruges til at afgive meldinger i auktionen. Spilleren trækker kortet ud og lægger det foran sig. Alle meldinger forbliver synlige under hele auktionen.<br><br>
+<strong>Fordele:</strong> Ingen misforståelser pga. dårlig hørelse. Alle meldinger synlige. Lettere at rekonstruere meldeforløbet. Standard i al turneringsbridge.`)}
+
+<h2>Oversigt over alle kort i meldekassen</h2>
+${tbl(['Korttype','Antal','Farve','Funktion'],[
+  ['Nummermeldinger','35 stk (1♣ til 7NT)','Hvid','Afgiv melding: trin + kulør/NT'],
+  ['Pas','1 stk','Grøn','Ingen melding'],
+  ['Dobling (X)','1 stk','Rød','Dobl modstandernes melding'],
+  ['Redobling (XX)','1 stk','Blå','Redobl en doblet melding'],
+  ['Stop-kort','1 stk','Rød kant','Advarsel FØR springmelding'],
+  ['Alert-kort','1 stk','Blå kant','Besked om kunstig melding'],
+])}
+
+<h2>De 35 nummermeldinger</h2>
+${tbl(['Trin','Meldinger','Stik lovet (6 + trin)'],[
+  ['1','1♣  1♦  1♥  1♠  1NT','7 stik'],
+  ['2','2♣  2♦  2♥  2♠  2NT','8 stik'],
+  ['3','3♣  3♦  3♥  3♠  3NT','9 stik'],
+  ['4','4♣  4♦  4♥  4♠  4NT','10 stik'],
+  ['5','5♣  5♦  5♥  5♠  5NT','11 stik'],
+  ['6','6♣  6♦  6♥  6♠  6NT','12 stik (lilleslem)'],
+  ['7','7♣  7♦  7♥  7♠  7NT','13 stik (storeslem)'],
+])}
+${rb(`<strong>Rangorden:</strong> Inden for hvert trin: ${C} < ${D} < ${H} < ${S} < NT. En ny melding skal altid være højere end den foregående.`)}
+
+<h2>Fysisk håndtering</h2>
+${rb(`<strong>Korrekt procedure:</strong><br>
+1. Tag det rigtige kort ud af meldekassen med én hånd<br>
+2. Læg kortet foran dig på bordet, synligt for alle<br>
+3. Kortet forbliver liggende under hele auktionen<br>
+4. Når auktionen er slut (tre pas i træk), samles alle meldekort<br><br>
+<strong>Vigtigt:</strong> Tag IKKE fat i et kort og læg det tilbage igen — det kan give ulovlig information. Beslut dig <em>inden</em> du rører meldekassen.`,'r')}
+
+<h2>Stop-proceduren</h2>
+${rb(`<strong>Hvornår:</strong> Når du afgiver en <em>springmelding</em> — en melding der springer et eller flere trin over.<br><br>
+<strong>Procedure:</strong><br>
+1. Læg <strong>Stop-kortet</strong> foran dig<br>
+2. Læg derefter dit meldekort (fx 3${H})<br>
+3. Næste spiller SKAL vente ca. 10 sekunder<br>
+4. Stop-kortet fjernes efter venteperioden<br><br>
+<strong>Formålet:</strong> Forhindre at hurtig eller langsom reaktion giver ulovlig information til makkeren.`,'g')}
+
+<h2>Alert-proceduren (besked)</h2>
+${rb(`<strong>Hvornår:</strong> Når din makker afgiver en <em>kunstig</em> melding der IKKE viser den naturlige kulør.<br><br>
+<strong>Procedure:</strong><br>
+1. Makker lægger sit meldekort (fx 2${C} Stayman)<br>
+2. DU lægger Alert-kortet og siger "besked"<br>
+3. Modstanderne har ret til at spørge om betydningen<br>
+4. Du forklarer konventionen — ikke din egen hånd!<br><br>
+<strong>Vigtigt:</strong> Det er altid <em>makkeren</em> der alerter — aldrig den der melder.`,'r')}
+
+<h2>Typiske meldinger der kræver alert</h2>
+${tbl(['Melding','Konvention','Forklaring'],[
+  ['2♣ over 1NT','Stayman','Spørger om 4-korts major'],
+  ['2♦ over 1NT','Jacoby transfer','Viser 5+ hjerter'],
+  ['2♥ over 1NT','Jacoby transfer','Viser 5+ spar'],
+  ['2♣ åbning','Stærk kunstig','22+ HP, viser ikke klør'],
+  ['4NT','Blackwood','Essespørger'],
+])}
+
+${tip(`Stop-proceduren er en af de hyppigste regelfejl hos begyndere. Husk: beslut dig INDEN du rører meldekassen, og alert altid makkeres konventionelle meldinger.`)}
+`},
 
     ];
