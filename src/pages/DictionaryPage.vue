@@ -18,8 +18,8 @@
             <div v-if="e.alt"
               v-html="'<span style=\'font-size:11px;color:grey;display:block;margin-bottom:5px\'>↔ ' + e.alt + '</span>'">
             </div>
-            <div class="dict-def" v-html="e.def"></div>
-            <div v-if="e.ex" class="dict-ex" v-html="'Eks.: ' + e.ex"></div>
+            <div class="dict-def" v-html="cs(e.def)"></div>
+            <div v-if="e.ex" class="dict-ex" v-html="'Eks.: ' + cs(e.ex)"></div>
           </div>
         </div>
       </template>
@@ -33,6 +33,9 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { dictionaryData, type DictGroup } from 'src/data/dictionary';
+import { colorSuits } from 'src/data/colorSuits';
+
+const cs = (s: string) => colorSuits(s);
 
 const search = ref('');
 const filtered = ref<DictGroup[]>(dictionaryData);

@@ -111,8 +111,8 @@
 .kw { color: var(--q-primary); }
 .ok { color: var(--q-positive); }
 .no { color: var(--q-negative); }
-.h, .d { color: #c62828; }
-.body--dark .h, .body--dark .d { color: #ef5350; }
+.h, .d, .suit-red { color: #c62828; }
+.body--dark .h, .body--dark .d, .body--dark .suit-red { color: #ef5350; }
 
 /* Card hands */
 .hand {

@@ -12,7 +12,7 @@
       <q-card-section v-if="entry?.alt" class="q-pt-none text-caption text-grey">
         ↔ {{ entry.alt }}
       </q-card-section>
-      <q-card-section v-if="entry" v-html="entry.def"></q-card-section>
+      <q-card-section v-if="entry" v-html="cs(entry.def)"></q-card-section>
       <q-card-section v-if="entry?.ex" class="q-pt-none text-caption text-italic" style="opacity:0.7">
         Eks.: {{ entry.ex }}
       </q-card-section>
@@ -23,7 +23,10 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue';
 import { lookupTerm } from 'src/data/termLinker';
+import { colorSuits } from 'src/data/colorSuits';
 import type { DictEntry } from 'src/data/dictionary';
+
+const cs = (s: string) => colorSuits(s);
 
 const props = defineProps<{ term: string | null }>();
 const emit = defineEmits<{ (e: 'close'): void }>();

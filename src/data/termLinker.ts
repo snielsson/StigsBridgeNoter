@@ -1,4 +1,5 @@
-import { dictionaryData, type DictEntry, type DictGroup } from './dictionary';
+import { dictionaryData, type DictEntry } from './dictionary';
+import { colorSuits } from './colorSuits';
 
 // Build a flat lookup map: lowercase term -> entry
 const termMap = new Map<string, DictEntry & { letter: string }>();
@@ -59,22 +60,22 @@ export function linkTerms(html: string): string {
   const parts = html.split(/(<[^>]+>)/);
   let insideLink = false;
 
-  return parts.map(part => {
+  const linked = parts.map(part => {
     if (part.startsWith('<')) {
-      // Track if we're inside a term-link to avoid nesting
       if (part.match(/<a\s/i) || part.match(/class="term-link"/)) insideLink = true;
       if (part.match(/<\/a>/i)) insideLink = false;
       return part;
     }
     if (insideLink) return part;
 
-    // Replace terms in text nodes
     return part.replace(termRegex, (match) => {
       const entry = termMap.get(match.toLowerCase());
       if (!entry) return match;
       return `<a class="term-link" data-term="${entry.term}" tabindex="0">${match}</a>`;
     });
   }).join('');
+
+  return colorSuits(linked);
 }
 
 /**
