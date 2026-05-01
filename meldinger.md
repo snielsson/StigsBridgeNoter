@@ -5,170 +5,232 @@ Hurtig opslagsbog. Klik dig ned gennem beslutningerne.
 ---
 
 <details>
+<summary><b>📚 Jævn fordeling</b> — definition</summary>
+
+En hånd er **jævnt fordelt** når den opfylder ALLE tre krav:
+
+- Ingen **renonce** (0-korts kulør)
+- Ingen **singleton** (1-korts kulør)
+- Højst **2 doubletoner** (2-korts kulører)
+
+Typiske jævne fordelinger:
+
+| Fordeling | Doubletoner | Type |
+|-----------|-------------|------|
+| 4-3-3-3 | 0 | Helt jævn |
+| 4-4-3-2 | 1 | Jævn |
+| 5-3-3-2 | 1 | Jævn |
+| 5-4-2-2 | 2 | Jævn (semi) |
+| 6-3-2-2 | 2 | Jævn (semi) |
+
+**Bruges til:** 1NT-åbning (15-17), 2NT-åbning (20-21), NT-indmeldinger, 1NT-svar.
+
+</details>
+
+---
+
+<details>
 <summary><b>🟢 ÅBNER</b> — du melder først (eller efter pas-pas-pas)</summary>
 
-<ul>
+<br>
 
-<li><details>
-<summary><b>0–12 HP</b> → PAS</summary>
+**Hovedregel for kuløråbning:** Åbn altid **længste farve**.
+**5-5 → fra oven** (højeste). **4-4 → fra neden** (laveste).
 
-For svag til at åbne. Med 12 HP og en god 5-korts kulør kan du dog overveje at åbne let.
+<details>
+<summary><b>0–11 HP</b> → PAS</summary>
 
-</details></li>
+For svag til at åbne. Med 11 HP og en virkelig god 6-korts kulør kan du i sæde overveje 1-åbning eller spærre.
 
-<li><details>
-<summary><b>13–20 HP, ikke afbalanceret 15-17</b> → 1 i farve</summary>
+</details>
 
-<ul>
+<details>
+<summary><b>22+ HP</b> → 2♣ (kunstig, forcing til parti)</summary>
 
-<li><details>
-<summary>5+ ♠ → <b>1♠</b></summary>
+- 22+ HP jævn fordeling, ELLER
+- Hånd der alene kan lave parti (~9 vindende stik)
+- **Viser ikke klør.** Makker SKAL svare (selv med 0 HP).
 
-Vis altid 5-korts major. Ved 5-5 i ♠+♥: start med 1♠.
+</details>
 
-**Eksempel:** ♠AK752 ♥QJ4 ♦K3 ♣962 (12 HP, 5♠) → 1♠
+<details>
+<summary><b>20–21 HP, jævn fordeling</b> → 2NT</summary>
 
-</details></li>
+- Præcis 20–21 HP
+- Jævn fordeling
+- Stoppere i alle 4 kulører
 
-<li><details>
-<summary>5+ ♥ → <b>1♥</b></summary>
+</details>
 
-5-korts hjerte prioriteres over 4-korts spar.
-
-**Eksempel:** ♠AK75 ♥QJ842 ♦K3 ♣96 (14 HP) → 1♥
-
-</details></li>
-
-<li><details>
-<summary>4-4 i major (ingen 5-korts) → <b>1♥</b></summary>
-
-Laveste 4-korts major. Makker kan vise spar i sit svar (1♠).
-
-**Eksempel:** ♠AJ54 ♥KQ32 ♦A76 ♣83 (15 HP) → 1♥
-
-</details></li>
-
-<li><details>
-<summary>4-4 i minor (ingen major) → <b>1♦</b></summary>
-
-Højeste 4-korts minor.
-
-**Eksempel:** ♠A3 ♥K72 ♦AQJ5 ♣KJ86 (17 HP) → 1♦
-
-</details></li>
-
-<li><details>
-<summary>Kun 4 ♦ → <b>1♦</b></summary>
-
-Det du har. Ingen 5-korts kulør, ingen 4-korts major, ikke 4-4 minor.
-
-**Eksempel:** ♠KQ97 ♥A3 ♦KJ85 ♣Q74 (15 HP) → 1♦
-
-</details></li>
-
-<li><details>
-<summary>Kun 4 ♣ → <b>1♣</b></summary>
-
-Det du har.
-
-</details></li>
-
-<li><details>
-<summary>3-3 i ♦+♣ (ingen 4-korts kulør) → <b>1♣</b></summary>
-
-"Bedre minor" — typisk ved 4-3-3-3 uden major: 1♣.
-
-</details></li>
-
-</ul>
-</details></li>
-
-<li><details>
-<summary><b>15–17 HP, afbalanceret</b> → 1NT</summary>
+<details>
+<summary><b>15–17 HP, jævn fordeling</b> → 1NT</summary>
 
 **Krav (alle skal opfyldes):**
 - Præcis 15–17 HP
-- Afbalanceret: 4-3-3-3, 4-4-3-2 eller 5-3-3-2
+- Jævn fordeling
 - Stoppere i mindst 3 kulører (helst alle 4)
-- IKKE med 4-4 i major (åbn 1♥)
+- IKKE med 4-4 i major (åbn 1♥ i stedet)
 
 **Eksempel:** ♠KQ86 ♥AJ ♦K1054 ♣A93 (16 HP, 4-2-4-3) → 1NT
 
-</details></li>
+</details>
 
-<li><details>
-<summary><b>20–21 HP, afbalanceret</b> → 2NT</summary>
+<details>
+<summary><b>12–20 HP, ikke 15-17 jævn</b> → 1 i farve</summary>
 
-- Præcis 20–21 HP
-- Afbalanceret fordeling
-- Stoppere i alle 4 kulører
+<br>
 
-</details></li>
+Åbn længste kulør. Ved lighed: **5-5 fra oven, 4-4 fra neden.**
 
-<li><details>
-<summary><b>22+ HP</b> → 2♣ (kunstig, forcing til parti)</summary>
+<details>
+<summary>6+ kort i én kulør → åbn den kulør</summary>
 
-- 22+ HP afbalanceret, ELLER
-- Hånd der alene kan lave parti (~9 vindende stik)
-- **Viser ikke klør.** Makker SKAL svare.
+Længste først, uanset om den er major eller minor.
 
-</details></li>
+**Eksempel:** ♠Q3 ♥A4 ♦KQJ862 ♣A75 (15 HP, 6♦) → 1♦
 
-<li><details>
-<summary><b>5–10 HP + lang kulør</b> → spærre</summary>
+</details>
+
+<details>
+<summary>5+ ♠ (længere end ♥) → 1♠</summary>
+
+Vis 5-korts spar. Også med 5♠ og 4♥: 1♠ (længste først).
+
+**Eksempel:** ♠AKJ75 ♥QJ42 ♦K3 ♣96 (14 HP, 5-4-2-2) → 1♠
+
+</details>
+
+<details>
+<summary>5+ ♥ (længere end ♠) → 1♥</summary>
+
+Vis 5-korts hjerte. Også med 5♥ og 4♠: 1♥ (længste først).
+
+**Eksempel:** ♠AK75 ♥QJ842 ♦K3 ♣96 (14 HP) → 1♥
+
+</details>
+
+<details>
+<summary>5-5 i ♠+♥ → 1♠ (fra oven)</summary>
+
+Højeste 5-korts kulør først. Hjerter melder du i 2. omgang.
+
+</details>
+
+<details>
+<summary>5+ ♦ (uden længere major) → 1♦</summary>
+
+Eksempel: ♠KQ ♥A75 ♦KJ862 ♣A93 (15 HP, 5♦) → 1♦
+
+</details>
+
+<details>
+<summary>5+ ♣ (uden længere major) → 1♣</summary>
+
+Eksempel: ♠K3 ♥A75 ♦Q92 ♣KJ862 (12 HP, 5♣) → 1♣
+
+</details>
+
+<details>
+<summary>5-5 i minor (♦+♣) → 1♦ (fra oven)</summary>
+
+Højeste 5-korts kulør først.
+
+</details>
+
+<details>
+<summary>4-4 i major (♠+♥), ingen 5-korts → 1♥ (fra neden)</summary>
+
+Laveste 4-korts kulør. Makker viser spar i 1♠-svaret.
+
+**Eksempel:** ♠AJ54 ♥KQ32 ♦A76 ♣83 (15 HP, 4-4-3-2) → 1♥
+
+</details>
+
+<details>
+<summary>4-4 i minor (♦+♣), ingen længere kulør → 1♣ (fra neden)</summary>
+
+Laveste 4-korts kulør efter den generelle regel.
+
+**Eksempel:** ♠KQ7 ♥A3 ♦KJ85 ♣Q1074 (14 HP, 3-2-4-4) → 1♣
+
+</details>
+
+<details>
+<summary>Kun 4-korts kulør → åbn den</summary>
+
+Når du har præcis én 4-korts kulør:
+
+| Den 4-korts kulør | Åbning |
+|------|--------|
+| ♠ | 1♠ |
+| ♥ | 1♥ |
+| ♦ | 1♦ |
+| ♣ | 1♣ |
+
+</details>
+
+<details>
+<summary>4-3-3-3 uden 4-korts major og uden 4-korts minor (3-3 i minor) → 1♣</summary>
+
+"Bedre minor" / korteste minor. Hånd: 4-card i en major er udelukket → meld klør.
+
+</details>
+
+</details>
+
+<details>
+<summary><b>5–10 HP + lang kulør</b> → spærreåbning</summary>
+
+<br>
 
 Tommelfingerregel: antal trumf − 3 = spærreniveau.
 
-<ul>
-
-<li><details>
-<summary>6-korts ♦ → <b>2♦</b> (svag)</summary>
+<details>
+<summary>6-korts ♦ → 2♦ (svag)</summary>
 
 5–10 HP, 6 ruder. Ingen sidekulør for stærk.
 
-</details></li>
+</details>
 
-<li><details>
-<summary>6-korts ♥ → <b>2♥</b> (svag)</summary>
+<details>
+<summary>6-korts ♥ → 2♥ (svag)</summary>
 
 5–10 HP, 6 hjerter.
 
-</details></li>
+</details>
 
-<li><details>
-<summary>6-korts ♠ → <b>2♠</b> (svag)</summary>
+<details>
+<summary>6-korts ♠ → 2♠ (svag)</summary>
 
 5–10 HP, 6 spar.
 
-</details></li>
+</details>
 
-<li><details>
-<summary>7-korts kulør → <b>3♣ / 3♦ / 3♥ / 3♠</b></summary>
+<details>
+<summary>7-korts kulør → 3♣ / 3♦ / 3♥ / 3♠</summary>
 
 5–10 HP, 7 kort, mindst 2 af AKQ i kuløren.
 
 **Eksempel:** ♠3 ♥KQJ9762 ♦84 ♣952 (7 HP) → 3♥
 
-</details></li>
+</details>
 
-<li><details>
-<summary>8-korts kulør → <b>4♥ / 4♠</b></summary>
+<details>
+<summary>8-korts kulør → 4♥ / 4♠</summary>
 
 5–10 HP, 8 kort i major.
 
-</details></li>
+</details>
 
-<li><details>
+<details>
 <summary>⚠️ OBS: 2♣ er ALDRIG en spærre</summary>
 
 2♣ er den stærke kunstige åbning (22+ HP). Brug 2♦/2♥/2♠ til spærre.
 
-</details></li>
+</details>
 
-</ul>
-</details></li>
+</details>
 
-</ul>
 </details>
 
 ---
@@ -176,25 +238,25 @@ Tommelfingerregel: antal trumf − 3 = spærreniveau.
 <details>
 <summary><b>🔵 INDMELDER</b> — modstander har åbnet</summary>
 
-<blockquote><b>Krav til indmelding (1-trin):</b><br>
-<b>8 HP + 5-farve</b> ELLER <b>10 HP + 6-farve</b></blockquote>
+<br>
 
-<ul>
+> **Krav til indmelding (1-trin):**<br>
+> **8 HP + 5-farve** ELLER **10 HP + 6-farve**
 
-<li><details>
+<details>
 <summary><b>1 i kulør</b> — naturlig indmelding</summary>
 
-<ul>
+<br>
 
-<li><details>
+<details>
 <summary>8+ HP + 5-korts kulør → 1 i kuløren</summary>
 
 **Eksempel — modstander åbnede 1♥:**
 ♠QJ976 ♥3 ♦Q84 ♣J762 (8 HP, 5♠) → **1♠**
 
-</details></li>
+</details>
 
-<li><details>
+<details>
 <summary>10+ HP + 6-korts kulør → 1 i kuløren</summary>
 
 Med kun 4-korts er der ikke nok længde — pas eller dobl.
@@ -202,29 +264,30 @@ Med kun 4-korts er der ikke nok længde — pas eller dobl.
 **Eksempel — modstander åbnede 1♦:**
 ♠QJ97632 ♥A3 ♦4 ♣J62 (10 HP, 7♠) → **1♠**
 
-</details></li>
+</details>
 
-<li><details>
+<details>
 <summary>Mindre end 8 HP eller kortere end 5 → PAS</summary>
 
-Ingen indmelding uden mindst 5-farve.
+Ingen indmelding uden mindst 5-farve og 8 HP.
 
-</details></li>
+</details>
 
-</ul>
-</details></li>
+</details>
 
-<li><details>
+<details>
 <summary><b>1NT-indmelding</b> (15–18 HP)</summary>
 
-- 15–18 HP afbalanceret
+- 15–18 HP, jævn fordeling
 - **Stopper i modstanderens kulør krævet**
 - Makker svarer som efter 1NT-åbning (juster HP-zone lidt op)
 
-</details></li>
+</details>
 
-<li><details>
+<details>
 <summary><b>Dobling (X)</b> — oplysningsdobling</summary>
+
+<br>
 
 Konventionel dobling: "Vælg din bedste kulør, makker."
 
@@ -234,82 +297,87 @@ Konventionel dobling: "Vælg din bedste kulør, makker."
 - Maks. 3-trin
 - 12+ HP og 4-4 (eller bedre) i de umeldte kulører
 
-<ul>
-
-<li><details>
+<details>
 <summary>Modstander åbnede 1♣ → X viser 4+ i ♠ ♥ ♦</summary>
 
-</details></li>
+</details>
 
-<li><details>
+<details>
 <summary>Modstander åbnede 1♦ → X viser 4+ i ♠ ♥ ♣</summary>
 
-</details></li>
+</details>
 
-<li><details>
+<details>
 <summary>Modstander åbnede 1♥ → X viser 4+ i ♠ ♦ ♣</summary>
 
 Særlig fokus på spar (vigtigste umeldte kulør).
 
-</details></li>
+</details>
 
-<li><details>
+<details>
 <summary>Modstander åbnede 1♠ → X viser 4+ i ♥ ♦ ♣</summary>
 
-</details></li>
+</details>
 
-<li><details>
+<details>
 <summary>Makkerens svar på X (du SKAL melde — selv med 0 HP)</summary>
 
-<ul>
-<li><details><summary>0–7 HP → laveste 4-korts kulør (tvunget)</summary></details></li>
-<li><details><summary>8–10 HP → bedste kulør på 2-trin</summary></details></li>
-<li><details><summary>11–12 HP → spring i bedste kulør (invitation)</summary></details></li>
-<li><details><summary>13+ HP → spring til parti / 2NT / cuebid mods. kulør</summary></details></li>
-</ul>
+<br>
 
-</details></li>
+<details>
+<summary>0–7 HP → laveste 4-korts kulør (tvunget)</summary>
+</details>
 
-</ul>
-</details></li>
+<details>
+<summary>8–10 HP → bedste kulør på 2-trin</summary>
+</details>
 
-<li><details>
+<details>
+<summary>11–12 HP → spring i bedste kulør (invitation)</summary>
+</details>
+
+<details>
+<summary>13+ HP → spring til parti / 2NT / cuebid mods. kulør</summary>
+</details>
+
+</details>
+
+</details>
+
+<details>
 <summary><b>Spærre-indmelding</b> (jump)</summary>
 
 Eksempel: 1♥ — 2♠ (jump) = svag, 6+ ♠, 5–10 HP. Spærrer modstanderne.
 
-</details></li>
+</details>
 
-<li><details>
+<details>
 <summary><b>Stærk indmelding</b> (uden jump på 2-trin)</summary>
 
 Eksempel: 1♠ — 2♥ = 14+ HP, 6+ ♥. Tvinger på 2-trin uden jump.
 
-</details></li>
+</details>
 
-<li><details>
+<details>
 <summary><b>2NT-indmelding</b> (20–21 HP)</summary>
 
-Stærk afbalanceret med stoppere.
+Stærk jævn hånd med stoppere.
 
-</details></li>
+</details>
 
-<li><details>
+<details>
 <summary><b>Sæde-indmelding</b> (balancering)</summary>
 
-Når alle har passet rundt og det er din tur:
-**10–11 HP + god kulør er nok** — du må ikke lade dem stjæle kontrakten.
+Når alle har passet rundt og det er din tur: **10–11 HP + god kulør er nok** — du må ikke lade dem stjæle kontrakten.
 
-</details></li>
+</details>
 
-<li><details>
+<details>
 <summary><b>PAS</b> — ingen passende indmelding</summary>
 
 Hvis du ikke har 8+ HP med 5-farve eller 10+ HP med 6-farve, og ingen oplysningsdobling-form: pas.
 
-</details></li>
-
-</ul>
+</details>
 
 </details>
 
@@ -318,140 +386,134 @@ Hvis du ikke har 8+ HP med 5-farve eller 10+ HP med 6-farve, og ingen oplysnings
 <details>
 <summary><b>🟡 SVARER</b> — makker har åbnet</summary>
 
-<ul>
+<br>
 
-<li><details>
+<details>
 <summary><b>Makker åbnede 1 i farve</b></summary>
 
-<ul>
+<br>
 
-<li><details>
+<details>
 <summary>0–5 HP → PAS</summary>
 
 For svagt til at svare. Selv med fit: pas.
 
-</details></li>
+</details>
 
-<li><details>
+<details>
 <summary>Du har fit (3+ kort i makkers kulør)</summary>
 
-<ul>
+<br>
 
-<li><details>
+<details>
 <summary>6–10 HP, 3-korts → 2 i kuløren (simpel støtte)</summary>
 
 Non-forcing. Åbner kan passe.
 
 **Eksempel:** ♠K75 ♥Q84 ♦A932 ♣J64 (10 HP, 3♥), makker åbnede 1♥ → 2♥
 
-</details></li>
+</details>
 
-<li><details>
+<details>
 <summary>6–10 HP, 5+ kort, distribueret → 4 i kuløren (præemptiv parti)</summary>
 
 Blokerer modstanderne. Svag i HP, men lang trumf.
 
 **Eksempel:** ♠KQ875 ♥3 ♦9732 ♣864 (6 HP, 5♠), makker åbnede 1♠ → 4♠
 
-</details></li>
+</details>
 
-<li><details>
+<details>
 <summary>10–12 HP, 4-korts → 3 i kuløren (limit raise, invitation)</summary>
 
 Inviterer åbner til parti. Åbner byder parti med 15+, passer med 13–14.
 
 **Eksempel:** ♠K875 ♥AQ4 ♦J73 ♣862 (11 HP, 4♠), makker åbnede 1♠ → 3♠
 
-</details></li>
+</details>
 
-<li><details>
+<details>
 <summary>13–15 HP, 4-korts (jævn) → 4 i kuløren (parti direkte)</summary>
 
 Stærk parti-støtte uden slem-interesse.
 
-</details></li>
+</details>
 
-<li><details>
+<details>
 <summary>13+ HP, 4+ kort i major → 2NT (Jacoby, forcing parti)</summary>
 
-Forcing til parti. Beder åbner om at vise singletons og styrke.
+Forcing til parti. Beder åbner om at vise singletons og styrke. Kun over 1♥/1♠.
 
-Kun over 1♥/1♠ (Jacoby 2NT er for major).
+</details>
 
-</details></li>
+</details>
 
-</ul>
-</details></li>
-
-<li><details>
+<details>
 <summary>Ingen fit, men 4+ ny kulør</summary>
 
-<ul>
+<br>
 
-<li><details>
+<details>
 <summary>6+ HP, 4+ ny kulør på 1-trin → ny kulør (forcing!)</summary>
 
 Ny kulør fra svarer er altid forcing. Åbner SKAL melde videre.
 
 **Eksempel:** Makker åbnede 1♣, du har ♠AKJ85 ♥73 ♦KQ4 ♣J82 (14 HP) → 1♠
 
-</details></li>
+</details>
 
-<li><details>
+<details>
 <summary>10+ HP, 4+ ny kulør på 2-trin → ny kulør (forcing)</summary>
 
 På 2-trin kræves mere styrke (10+) fordi vi presser auktionen op.
 
-</details></li>
+</details>
 
-</ul>
-</details></li>
+</details>
 
-<li><details>
+<details>
 <summary>Ingen fit, ingen ny kulør → NT</summary>
 
-<ul>
+<br>
 
-<li><details>
+<details>
 <summary>6–10 HP → 1NT (negativ, non-forcing)</summary>
 
 "Jeg har 6-10 HP, ingen 4-korts ny kulør på 1-trin, ingen fit."
 
-</details></li>
+</details>
 
-<li><details>
+<details>
 <summary>11–12 HP → 2NT (invitation)</summary>
 
 Inviterer til 3NT. Åbner byder 3NT med 14+.
 
-</details></li>
+</details>
 
-<li><details>
+<details>
 <summary>13–15 HP → 3NT (parti direkte)</summary>
 
-Balanceret partihånd uden major-interesse.
+Jævn partihånd uden major-interesse.
 
-</details></li>
+</details>
 
-</ul>
-</details></li>
+</details>
 
-</ul>
-</details></li>
+</details>
 
-<li><details>
-<summary><b>Makker åbnede 1NT</b> (15–17 HP)</summary>
+<details>
+<summary><b>Makker åbnede 1NT</b> (15–17 HP, jævn)</summary>
 
-<ul>
+<br>
 
-<li><details>
+<details>
 <summary>0–7 HP, intet major-fit → PAS</summary>
 
 Total max 24 HP — under partigrænsen.
 
-</details></li>
+</details>
 
-<li><details>
+<details>
 <summary>5+ ♥ → 2♦ (Jacoby transfer til ♥)</summary>
 
 Åbner SKAL melde 2♥. Derefter:
@@ -460,103 +522,206 @@ Total max 24 HP — under partigrænsen.
 - 4♥ (parti)
 - 3NT (vælg mellem 3NT/4♥)
 
-</details></li>
+</details>
 
-<li><details>
+<details>
 <summary>5+ ♠ → 2♥ (Jacoby transfer til ♠)</summary>
 
 Åbner SKAL melde 2♠. Samme opfølgning som ovenfor.
 
-</details></li>
+</details>
 
-<li><details>
+<details>
 <summary>8+ HP + 4-korts major (ingen 5) → 2♣ (Stayman)</summary>
 
 "Har du en 4-korts major?"
 
-<ul>
-<li><details><summary>Åbner svarer 2♦ → ingen 4-korts major</summary>Svarer melder så 2NT (inv.) eller 3NT (parti).</details></li>
-<li><details><summary>Åbner svarer 2♥ → 4 hjerter (måske også 4 spar)</summary>Svarer m. 4♥ → 4♥. Svarer kun 4♠ → 3NT.</details></li>
-<li><details><summary>Åbner svarer 2♠ → 4 spar (men ikke 4 hjerter)</summary>Svarer m. 4♠ → 4♠. Svarer kun 4♥ → 3NT.</details></li>
-</ul>
+<details>
+<summary>Åbner svarer 2♦ → ingen 4-korts major</summary>
 
-</details></li>
+Svarer melder så 2NT (inv.) eller 3NT (parti).
 
-<li><details>
-<summary>8–9 HP, balanceret, ingen major → 2NT (invitation)</summary>
+</details>
+
+<details>
+<summary>Åbner svarer 2♥ → 4 hjerter (måske også 4 spar)</summary>
+
+Svarer m. 4♥ → 4♥. Svarer kun 4♠ → 3NT.
+
+</details>
+
+<details>
+<summary>Åbner svarer 2♠ → 4 spar (men ikke 4 hjerter)</summary>
+
+Svarer m. 4♠ → 4♠. Svarer kun 4♥ → 3NT.
+
+</details>
+
+</details>
+
+<details>
+<summary>8–9 HP, jævn, ingen major → 2NT (invitation)</summary>
 
 Åbner passer med 15, byder 3NT med 16-17.
 
-</details></li>
+</details>
 
-<li><details>
-<summary>10–15 HP, balanceret, ingen major → 3NT (parti)</summary>
+<details>
+<summary>10–15 HP, jævn, ingen major → 3NT (parti)</summary>
 
 Direkte parti.
 
-</details></li>
+</details>
 
-<li><details>
+<details>
 <summary>16+ HP → 4NT (kvantitativ inv. til lilleslem)</summary>
 
 IKKE Blackwood. Åbner byder 6NT med 17, passer med 15.
 
-</details></li>
+</details>
 
-<li><details>
+<details>
 <summary>17+ HP → 6NT (lilleslem direkte)</summary>
 
 Total 32+ HP → lilleslem.
 
-</details></li>
+</details>
 
-</ul>
-</details></li>
+</details>
 
-<li><details>
-<summary><b>Makker åbnede 2NT</b> (20–21 HP)</summary>
+<details>
+<summary><b>Makker åbnede 2NT</b> (20–21 HP, jævn)</summary>
 
-<ul>
-<li><details><summary>0–3 HP → PAS</summary>Total max 24 — under parti.</details></li>
-<li><details><summary>4–9 HP, ingen major → 3NT</summary>Direkte parti.</details></li>
-<li><details><summary>4+ HP + 4-korts major → 3♣ (Stayman)</summary>Åbner: 3♦=ingen, 3♥=4♥, 3♠=4♠.</details></li>
-<li><details><summary>4+ HP + 5-korts ♥ → 3♦ (transfer ♥)</summary>Åbner SKAL melde 3♥.</details></li>
-<li><details><summary>4+ HP + 5-korts ♠ → 3♥ (transfer ♠)</summary>Åbner SKAL melde 3♠.</details></li>
-<li><details><summary>10–12 HP → 4NT (kvantitativ)</summary>Åbner 6NT med 21, pas med 20.</details></li>
-<li><details><summary>13+ HP → 6NT (lilleslem)</summary></details></li>
-</ul>
+<br>
 
-</details></li>
+<details>
+<summary>0–3 HP → PAS</summary>
 
-<li><details>
+Total max 24 — under parti.
+
+</details>
+
+<details>
+<summary>4–9 HP, ingen major → 3NT</summary>
+
+Direkte parti.
+
+</details>
+
+<details>
+<summary>4+ HP + 4-korts major → 3♣ (Stayman)</summary>
+
+Åbner: 3♦=ingen, 3♥=4♥, 3♠=4♠.
+
+</details>
+
+<details>
+<summary>4+ HP + 5-korts ♥ → 3♦ (transfer ♥)</summary>
+
+Åbner SKAL melde 3♥.
+
+</details>
+
+<details>
+<summary>4+ HP + 5-korts ♠ → 3♥ (transfer ♠)</summary>
+
+Åbner SKAL melde 3♠.
+
+</details>
+
+<details>
+<summary>10–12 HP → 4NT (kvantitativ)</summary>
+
+Åbner 6NT med 21, pas med 20.
+
+</details>
+
+<details>
+<summary>13+ HP → 6NT (lilleslem)</summary>
+
+</details>
+
+</details>
+
+<details>
 <summary><b>Makker åbnede 2♣</b> (kunstig, forcing til parti)</summary>
+
+<br>
 
 > Du SKAL svare — selv med 0 HP.
 
-<ul>
-<li><details><summary>0–7 HP → 2♦ (waiting bid)</summary>Kunstig — siger blot "fortsæt".</details></li>
-<li><details><summary>8+ HP + 5+ ♥ → 2♥</summary>Naturlig.</details></li>
-<li><details><summary>8+ HP + 5+ ♠ → 2♠</summary>Naturlig.</details></li>
-<li><details><summary>8–10 HP, afbalanceret → 2NT</summary>Ingen 5-korts kulør.</details></li>
-<li><details><summary>8+ HP + 5+ ♣/♦ → 3♣ / 3♦</summary>Naturlig.</details></li>
-</ul>
+<details>
+<summary>0–7 HP → 2♦ (waiting bid)</summary>
 
-</details></li>
+Kunstig — siger blot "fortsæt".
 
-<li><details>
+</details>
+
+<details>
+<summary>8+ HP + 5+ ♥ → 2♥</summary>
+
+Naturlig.
+
+</details>
+
+<details>
+<summary>8+ HP + 5+ ♠ → 2♠</summary>
+
+Naturlig.
+
+</details>
+
+<details>
+<summary>8–10 HP, jævn → 2NT</summary>
+
+Ingen 5-korts kulør.
+
+</details>
+
+<details>
+<summary>8+ HP + 5+ ♣/♦ → 3♣ / 3♦</summary>
+
+Naturlig.
+
+</details>
+
+</details>
+
+<details>
 <summary><b>Makker åbnede en spærre</b> (2♥/2♠/3-trin)</summary>
 
-<ul>
-<li><details><summary>Svag, ingen fit → PAS</summary></details></li>
-<li><details><summary>3+ kort i kuløren, svag → spærre videre</summary>Eks. 2♥ → 3♥ (yderligere blokering).</details></li>
-<li><details><summary>4+ kort + 16+ HP → parti</summary>Eks. 2♥ → 4♥.</details></li>
-<li><details><summary>Stærk uden fit → 2NT (kunstig — spørger om kvalitet)</summary>Makker: 3 i åbningskuløren = svag kulør. Ny kulør = feature (A/K).</details></li>
-<li><details><summary>Stærk + slem-interesse → 4NT (Blackwood)</summary></details></li>
-</ul>
+<br>
 
-</details></li>
+<details>
+<summary>Svag, ingen fit → PAS</summary>
+</details>
 
-</ul>
+<details>
+<summary>3+ kort i kuløren, svag → spærre videre</summary>
+
+Eks. 2♥ → 3♥ (yderligere blokering).
+
+</details>
+
+<details>
+<summary>4+ kort + 16+ HP → parti</summary>
+
+Eks. 2♥ → 4♥.
+
+</details>
+
+<details>
+<summary>Stærk uden fit → 2NT (kunstig — spørger om kvalitet)</summary>
+
+Makker: 3 i åbningskuløren = svag kulør. Ny kulør = feature (A/K).
+
+</details>
+
+<details>
+<summary>Stærk + slem-interesse → 4NT (Blackwood)</summary>
+</details>
+
+</details>
 
 </details>
 
@@ -565,145 +730,262 @@ Total 32+ HP → lilleslem.
 <details>
 <summary><b>🔴 FORTSÆTTER</b> — 2. melding (rebid og videre)</summary>
 
-<ul>
+<br>
 
-<li><details>
+<details>
 <summary><b>Åbners 2. melding efter 1-major — 1NT</b></summary>
 
-<ul>
-<li><details><summary>13–15 HP, 5+ ♥ → 2♥ (gentagelse)</summary>Svag, ensfarvet.</details></li>
-<li><details><summary>13–15 HP, 4+ ♣/♦ → 2♣ / 2♦ (ny kulør, non-forc.)</summary></details></li>
-<li><details><summary>16–18 HP, 5+ ♥ → 3♥ (jump, invitation)</summary></details></li>
-<li><details><summary>19–20 HP → 4♥ (parti direkte)</summary></details></li>
-</ul>
+<br>
 
-</details></li>
+<details>
+<summary>13–15 HP, 5+ ♥ → 2♥ (gentagelse)</summary>
 
-<li><details>
+Svag, ensfarvet.
+
+</details>
+
+<details>
+<summary>13–15 HP, 4+ ♣/♦ → 2♣ / 2♦ (ny kulør, non-forc.)</summary>
+</details>
+
+<details>
+<summary>16–18 HP, 5+ ♥ → 3♥ (jump, invitation)</summary>
+</details>
+
+<details>
+<summary>19–20 HP → 4♥ (parti direkte)</summary>
+</details>
+
+</details>
+
+<details>
 <summary><b>Åbners 2. melding efter ny kulør (forcing)</b></summary>
+
+<br>
 
 Eksempel: 1♥ — 1♠
 
-<ul>
-<li><details><summary>4+ ♠ (fit!), 13–15 HP → 2♠</summary>Simpel støtte, non-forc.</details></li>
-<li><details><summary>4+ ♠ (fit!), 16–18 HP → 3♠ (jump, invitation)</summary></details></li>
-<li><details><summary>4+ ♠ (fit!), 19–20 HP → 4♠ (parti)</summary></details></li>
-<li><details><summary>13–15 HP, 6+ ♥ → 2♥ (gentagelse)</summary></details></li>
-<li><details><summary>16–18 HP, 6+ ♥ → 3♥ (jump, invitation)</summary></details></li>
-<li><details><summary>13–14 HP, balanceret → 1NT</summary></details></li>
-<li><details><summary>18–19 HP, balanceret → 2NT (jump)</summary></details></li>
-<li><details><summary>17+ HP, 4+ højere kulør → REVERSE (forcing)</summary>Eks. 1♥–1♠–2♣ er IKKE reverse. 1♣–1♥–2♠ ER reverse.</details></li>
-<li><details><summary>13–15 HP, 4+ lavere kulør → 2♣/2♦ (non-forc.)</summary></details></li>
-</ul>
+<details>
+<summary>4+ ♠ (fit!), 13–15 HP → 2♠</summary>
 
-</details></li>
+Simpel støtte, non-forc.
 
-<li><details>
+</details>
+
+<details>
+<summary>4+ ♠ (fit!), 16–18 HP → 3♠ (jump, invitation)</summary>
+</details>
+
+<details>
+<summary>4+ ♠ (fit!), 19–20 HP → 4♠ (parti)</summary>
+</details>
+
+<details>
+<summary>13–15 HP, 6+ ♥ → 2♥ (gentagelse)</summary>
+</details>
+
+<details>
+<summary>16–18 HP, 6+ ♥ → 3♥ (jump, invitation)</summary>
+</details>
+
+<details>
+<summary>13–14 HP, jævn → 1NT</summary>
+</details>
+
+<details>
+<summary>18–19 HP, jævn → 2NT (jump)</summary>
+</details>
+
+<details>
+<summary>17+ HP, 4+ højere kulør → REVERSE (forcing)</summary>
+
+Eks. 1♥–1♠–2♣ er IKKE reverse. 1♣–1♥–2♠ ER reverse.
+
+</details>
+
+<details>
+<summary>13–15 HP, 4+ lavere kulør → 2♣/2♦ (non-forc.)</summary>
+</details>
+
+</details>
+
+<details>
 <summary><b>Reverse</b> (omvending)</summary>
+
+<br>
 
 Åbners gensvar i ny kulør på 2-trin der er **højere** end åbningskuløren.
 
-<ul>
-<li><details><summary>1♣ — 1♥ — 2♦ → IKKE reverse (lavere)</summary>13–15 HP, 4+ ruder.</details></li>
-<li><details><summary>1♣ — 1♥ — 2♠ → REVERSE (17+ HP)</summary>5+ klør, 4+ spar. Forcing.</details></li>
-<li><details><summary>1♦ — 1♠ — 2♥ → REVERSE (17+ HP)</summary>5+ ruder, 4+ hjerter. Forcing.</details></li>
-<li><details><summary>1♦ — 1♥ — 2♣ → IKKE reverse (lavere)</summary>13–15 HP, 4+ klør.</details></li>
-</ul>
+<details>
+<summary>1♣ — 1♥ — 2♦ → IKKE reverse (lavere)</summary>
+
+13–15 HP, 4+ ruder.
+
+</details>
+
+<details>
+<summary>1♣ — 1♥ — 2♠ → REVERSE (17+ HP)</summary>
+
+5+ klør, 4+ spar. Forcing.
+
+</details>
+
+<details>
+<summary>1♦ — 1♠ — 2♥ → REVERSE (17+ HP)</summary>
+
+5+ ruder, 4+ hjerter. Forcing.
+
+</details>
+
+<details>
+<summary>1♦ — 1♥ — 2♣ → IKKE reverse (lavere)</summary>
+
+13–15 HP, 4+ klør.
+
+</details>
 
 > **Reverse = Rigtig Styrke.** Første kulør altid længere end den anden.
 
-</details></li>
+</details>
 
-<li><details>
+<details>
 <summary><b>Svarers 2. melding</b></summary>
 
-<ul>
+<br>
 
-<li><details>
+<details>
 <summary>Når fit er fundet (1♥ — 2♥ — 2♥)</summary>
 
-<ul>
-<li><details><summary>Svarer 6–8 HP (total 19–23) → PAS</summary></details></li>
-<li><details><summary>Svarer 9–10 HP (total 22–25) → 3♥ (invitation)</summary></details></li>
-<li><details><summary>Svarer 11+ HP (total 24+) → 4♥ (parti)</summary></details></li>
-</ul>
+<br>
 
-</details></li>
+<details>
+<summary>Svarer 6–8 HP (total 19–23) → PAS</summary>
+</details>
 
-<li><details>
+<details>
+<summary>Svarer 9–10 HP (total 22–25) → 3♥ (invitation)</summary>
+</details>
+
+<details>
+<summary>Svarer 11+ HP (total 24+) → 4♥ (parti)</summary>
+</details>
+
+</details>
+
+<details>
 <summary>Når ingen fit</summary>
 
-<ul>
-<li><details><summary>Gentag egen kulør → 6+ kort, ikke-forcing</summary></details></li>
-<li><details><summary>Ny kulør → forcing</summary></details></li>
-<li><details><summary>2NT → invitation (11–12 HP)</summary></details></li>
-<li><details><summary>3NT → parti (13+ HP)</summary></details></li>
-</ul>
+<br>
 
-</details></li>
+<details>
+<summary>Gentag egen kulør → 6+ kort, ikke-forcing</summary>
+</details>
 
-</ul>
+<details>
+<summary>Ny kulør → forcing</summary>
+</details>
 
-</details></li>
+<details>
+<summary>2NT → invitation (11–12 HP)</summary>
+</details>
 
-<li><details>
+<details>
+<summary>3NT → parti (13+ HP)</summary>
+</details>
+
+</details>
+
+</details>
+
+<details>
 <summary><b>Jacoby 2NT</b> (over 1-major)</summary>
+
+<br>
 
 2NT over 1♥/1♠ = 13+ HP, 4+ kort i kuløren, **forcing til parti**.
 
 Åbnerens gensvar viser singletons:
 
-<ul>
-<li><details><summary>3 i ny kulør → singleton/void i kuløren</summary></details></li>
-<li><details><summary>3 i åbningskuløren → minimum (13–14 HP), ingen singleton</summary></details></li>
-<li><details><summary>4 i åbningskuløren → stærk uden singleton</summary></details></li>
-<li><details><summary>3NT → 15–17 HP balanceret</summary></details></li>
-</ul>
+<details>
+<summary>3 i ny kulør → singleton/void i kuløren</summary>
+</details>
 
-</details></li>
+<details>
+<summary>3 i åbningskuløren → minimum (13–14 HP), ingen singleton</summary>
+</details>
 
-<li><details>
+<details>
+<summary>4 i åbningskuløren → stærk uden singleton</summary>
+</details>
+
+<details>
+<summary>3NT → 15–17 HP, jævn fordeling</summary>
+</details>
+
+</details>
+
+<details>
 <summary><b>Blackwood / RKC 1430</b> (4NT essespørger)</summary>
+
+<br>
 
 Bruges kun når **fit er etableret** og 33+ HP er sandsynligt.
 
-<ul>
-
-<li><details>
+<details>
 <summary>Klassisk Blackwood (4 esser)</summary>
 
-<ul>
-<li><details><summary>5♣ → 0 eller 4 esser</summary></details></li>
-<li><details><summary>5♦ → 1 es</summary></details></li>
-<li><details><summary>5♥ → 2 esser</summary></details></li>
-<li><details><summary>5♠ → 3 esser</summary></details></li>
-</ul>
+<br>
 
-</details></li>
+<details>
+<summary>5♣ → 0 eller 4 esser</summary>
+</details>
 
-<li><details>
+<details>
+<summary>5♦ → 1 es</summary>
+</details>
+
+<details>
+<summary>5♥ → 2 esser</summary>
+</details>
+
+<details>
+<summary>5♠ → 3 esser</summary>
+</details>
+
+</details>
+
+<details>
 <summary>RKC 1430 (Roman Key Card)</summary>
+
+<br>
 
 Key cards = 4 esser + trumf-K (5 i alt).
 
-<ul>
-<li><details><summary>5♣ → 1 eller 4 key cards</summary></details></li>
-<li><details><summary>5♦ → 0 eller 3 key cards</summary></details></li>
-<li><details><summary>5♥ → 2 key cards, INGEN trumfdame</summary></details></li>
-<li><details><summary>5♠ → 2 key cards + trumfdame</summary></details></li>
-</ul>
+<details>
+<summary>5♣ → 1 eller 4 key cards</summary>
+</details>
+
+<details>
+<summary>5♦ → 0 eller 3 key cards</summary>
+</details>
+
+<details>
+<summary>5♥ → 2 key cards, INGEN trumfdame</summary>
+</details>
+
+<details>
+<summary>5♠ → 2 key cards + trumfdame</summary>
+</details>
 
 Husketal: **1430** = 1/4 (5♣), 3/0 (5♦).
 
-</details></li>
-
-</ul>
+</details>
 
 > 4NT er IKKE Blackwood efter 1NT/2NT — der er det kvantitativ invitation til 6NT.
 
-</details></li>
+</details>
 
-<li><details>
+<details>
 <summary><b>Parti-tærskler</b></summary>
 
 | Kontrakt | Stik | Min. kombineret HP |
@@ -714,8 +996,6 @@ Husketal: **1430** = 1/4 (5♣), 3/0 (5♦).
 | 6 (lilleslem) | 12 | 33+ |
 | 7 (storeslem) | 13 | 37+ |
 
-</details></li>
-
-</ul>
+</details>
 
 </details>
