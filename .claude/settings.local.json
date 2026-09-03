@@ -12,7 +12,18 @@
       "Bash(cd \"C:/git/github/snielsson/StigsBridgeNoter\" && rm -f icon-192.png icon-512.png manifest.json sw.js files.zip)",
       "Bash(cd \"C:/git/github/snielsson/StigsBridgeNoter\" && sed -i \"s/font-family:var\\(--mono\\);//g\" src/pages/HpCalculatorPage.vue && sed -i \"s/font-family:var\\(--mono\\);//g\" src/pages/DictionaryPage.vue && sed -i \"s/font-family:var\\(--serif\\);//g\" src/pages/HpCalculatorPage.vue && sed -i \"s/font-family:var\\(--sans\\);//g\" src/pages/HpCalculatorPage.vue && echo \"done\")",
       "Bash(cd \"C:/git/github/snielsson/StigsBridgeNoter\" && sed -i 's/var\\(--text-dim\\)/grey/g; s/var\\(--accent\\)/var\\(--q-primary\\)/g; s/var\\(--accent2\\)/var\\(--q-positive\\)/g; s/var\\(--surface2\\)/rgba\\(0,0,0,0.03\\)/g; s/var\\(--surface\\)/transparent/g; s/var\\(--border\\)/rgba\\(128,128,128,0.2\\)/g; s/var\\(--text\\)/inherit/g; s/var\\(--bg\\)/inherit/g' src/pages/HpCalculatorPage.vue && echo \"done\")",
-      "Bash(cd \"C:/git/github/snielsson/StigsBridgeNoter\" && sed -i 's/var\\(--text-dim\\)/grey/g; s/var\\(--mono\\)/monospace/g' src/pages/DictionaryPage.vue && echo \"done\")"
+      "Bash(cd \"C:/git/github/snielsson/StigsBridgeNoter\" && sed -i 's/var\\(--text-dim\\)/grey/g; s/var\\(--mono\\)/monospace/g' src/pages/DictionaryPage.vue && echo \"done\")",
+      "Bash(pdftotext \"C:/git/github/snielsson/StigsBridgeNoter/BIDT-AF-BRIDGE-ny.min.pdf\" -)",
+      "Bash(mutool info:*)",
+      "Bash(pdftotext -layout \"C:/git/github/snielsson/StigsBridgeNoter/BIDT-AF-BRIDGE-ny.min.pdf\" -)",
+      "Bash(pdfinfo \"C:/git/github/snielsson/StigsBridgeNoter/BIDT-AF-BRIDGE-ny.min.pdf\")",
+      "Bash(where tesseract:*)",
+      "Bash(where magick:*)",
+      "Bash(pip show:*)",
+      "Bash(where pdftoppm:*)",
+      "Bash(where poppler*)",
+      "Bash(scoop list:*)",
+      "Bash(pip list:*)"
     ]
   }
 }

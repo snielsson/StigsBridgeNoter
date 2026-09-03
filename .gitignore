@@ -24,3 +24,6 @@ yarn-error.log*
 *.sw?
 
 # Keep docs/ tracked for GitHub Pages
+
+# Claude Code worktrees
+.claude/worktrees/
